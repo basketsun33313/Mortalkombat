@@ -22,7 +22,7 @@ const playerSecond = {
 
 const arena = document.querySelector('.arenas');
 
-const createPlayer =  (player1, name, life) => {
+const createPlayer =  (player1, name, life, img) => {
     let playerOne = document.createElement('div');
     playerOne.classList.add('player1');
     arena.appendChild(playerOne);
@@ -39,12 +39,12 @@ const createPlayer =  (player1, name, life) => {
     let playerName = progressBar.createElement('div');
     playerName.classList.add('name');
     progressBar.appendChild('name');
-    playerName.innerText = `${playerFirst}.name`;
+    playerName.innerText = `${playerFirst.name}`;
     let image = character.createElement('img');
     character.appendChild('image');
     image.src = playerOne.img;
 };
 
-createPlayer('player1', 'SCORPION', 50);
-createPlayer('player2', 'SUB-ZERO', 80);
+createPlayer('player1', 'SCORPION', 50, playerFirst.img);
+createPlayer('player2', 'SUB-ZERO', 80, playerSecond.img);
 
