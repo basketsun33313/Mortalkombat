@@ -23,26 +23,26 @@ const playerSecond = {
 const arena = document.querySelector('.arenas');
 
 const createPlayer =  (player1, name, life) => {
-    let player1 = document.createElement('div');
-    player1.classList.add('player1');
-    arena.appendChild(player1);
+    let playerOne = document.createElement('div');
+    playerOne.classList.add('player1');
+    arena.appendChild(playerOne);
     let progressBar = player1.createElement('div');
     progressBar.classList.add('.progressbar');
     player1.appendChild('progressBar');
     let character = player1.createElement('div');
     character.classList.add('character');
     player1.appendChild('character');
-    let life = progressBar.createElement('div');
-    life.classList.add('life');
+    let playerlife = progressBar.createElement('div');
+    playerlife.classList.add('life');
     progressBar.appendChild('life');
-    life.style.width = `${life}%`;
-    let name = progressBar.createElement('div');
-    name.classList.add('name');
+    playerlife.style.width = `${life}%`;
+    let playerName = progressBar.createElement('div');
+    playerName.classList.add('name');
     progressBar.appendChild('name');
-    name.innerText = `${playerFirst}.name`;
+    playerName.innerText = `${playerFirst}.name`;
     let image = character.createElement('img');
     character.appendChild('image');
-    image.src = player1.img;
+    image.src = playerOne.img;
 };
 
 createPlayer('player1', 'SCORPION', 50);
